@@ -1,10 +1,10 @@
 # Luana Vitoriano Martins dos Santos
  Estudante de Análise e Desenvolvimento de Sistemas
 ---
-### 📬 Meus Contatos
+### 📬 
 
-[![E-mail](https://img.shields.io/badge/-Email-FFF?style=for-the-badge&logo=microsoft-outlook&logoColor=FF00F6&color:FFF)](mailto:luanaxtech@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-FFF?style=for-the-badge&logo=linkedin&logoColor=FF00F6&color:FFF)](https://www.linkedin.com/in/luana-vitoriano/)
+[![E-mail](https://img.shields.io/badge/-Email-000?style=for-the-badge&logo=microsoft-outlook&logoColor=FF00F6&color:FFF)](mailto:luanaxtech@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-000?style=for-the-badge&logo=linkedin&logoColor=FF00F6&color:FFF)](https://www.linkedin.com/in/luana-vitoriano/)
 
 ---
 ###  Sobre
