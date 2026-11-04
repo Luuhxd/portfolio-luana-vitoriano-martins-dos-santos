@@ -1,13 +1,13 @@
 # Luana Vitoriano Martins dos Santos
  Estudante de Análise e Desenvolvimento de Sistemas
 ---
-### 📬 
+### 📬 Meus Contatos
 
 [![E-mail](https://img.shields.io/badge/-Email-000?style=for-the-badge&logo=microsoft-outlook&logoColor=FF00F6&color:FFF)](mailto:luanaxtech@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-000?style=for-the-badge&logo=linkedin&logoColor=FF00F6&color:FFF)](https://www.linkedin.com/in/luana-vitoriano/)
 
 ---
-###  Sobre
+### 👩‍💻 Sobre
 Atualmente curso o 2º período de Análise e Desenvolvimento de Sistemas (ADS) na UNICID – Universidade Cidade de São Paulo e sou formada como Técnica em Informática para Internet pela ETEC Cidade Tiradentes.
 
 Sou apaixonada por tecnologia e por transformar ideias em interfaces funcionais, criativas e intuitivas. Tenho maior interesse em Desenvolvimento Web e Front-end, área em que busco constantemente aprimorar meus conhecimentos, além de explorar temas como UX/UI, Inteligência Artificial e Cibersegurança.
