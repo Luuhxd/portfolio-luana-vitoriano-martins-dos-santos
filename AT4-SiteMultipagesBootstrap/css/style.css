@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garante 100% da altura da tela */
+  margin: 0;
+}
+
+
+/* O conteúdo principal cresce, mas o footer fica na base */
+.content {
+  flex: 1;  
+  display: flex;
+  flex-direction: column;  
+  
+  justify-content: center; /* Mantém centralizado verticalmente (no meio da altura) */
+  align-items: flex-start; /* Alinha totalmente à esquerda da página */
+  padding: 0 3rem;         /* Opcional: dá um espaço confortável para o texto não colar na borda da tela */
+}
+
+
+
+
+/* ==================================================
+   Navbar
+================================================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  color: #fff;
+  padding: 1rem 2rem;
+  height: 60px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin-left: auto; 
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+   position: relative; /* Importante para posicionar a linha embaixo do texto */
+  padding-bottom: 5px; /* Espaço entre o texto e a futura linha */
+
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0; /* Começa com largura zero (invisível) */
+  height: 2px; /* Espessura da barrinha */
+  background-color: rgb(129, 219, 120); 
+  transition: width 0.3s ease; /* Faz a linha crescer suavemente */
+}
+
+/* 3. Efeito Hover: Muda a cor do texto e faz a barra aparecer */
+.nav-text:hover {
+  color: rgb(129, 219, 120);
+}
+
+.nav-links a:hover::after {
+  width: 100%; /* Faz a barrinha esticar até ocupar 100% do texto */
+}
+
+
+/* ==================================================
+   Home Section
+================================================== */
+.home-section {
+    font-family: "Irish Grover", system-ui;
+    font-size: 40px;
+}
+
+#home h1:hover {
+  color: rgb(129, 219, 120);
+  
+}
+
+
+/* ==================================================
+   Imagem
+================================================== */
+
+.img {
+    position: absolute;
+    right: 1px;
+    top:  140px;
+    width: 50%;
+    transform: scaleX(-1);
+      /* Aplica o embaçado inicial */
+  filter: blur(2px); 
+  
+  /* Transição suave para o efeito não mudar de forma brusca */
+  transition: filter 0.5s ease; 
+}
+
+/* Quando passar o mouse, o embaçado zera */
+.img:hover {
+  filter: blur(0px); 
+  
+}
+
+/* ==================================================
+   Sobre
+================================================== */
+
+
+.sobre-container {
+  max-width: 700px;       /* Evita que as linhas fiquem longas demais e cansem os olhos */
+  margin: 0 auto;         
+  padding: 2rem;
+  text-align: center;     
+}
+
+/* Estilização do Título Principal */
+.sobre-container h2 {
+  font-size: 2.5rem;
+  color: rgb(129, 219, 120); 
+  text-transform: uppercase;  /* Deixa em letras maiúsculas para dar impacto */
+  letter-spacing: 2px;       /* Espaçamento estiloso entre as letras */
+  margin-bottom: 1.5rem;
+}
+
+/* Parágrafo de introdução (Destaque) */
+.sobre-container .lead {
+  font-size: 1.25rem;
+  color: #ffffff;           
+  line-height: 1.6;        
+  margin-bottom: 1.5rem;
+  text-align: justify;   
+}
+
+/* Segundo parágrafo (Corpo do texto) */
+.sobre-container .texto-biografia {
+  font-size: 1.05rem;
+  color: #cccccc;        
+  line-height: 1.7;
+  text-align: justify;       
+}
+
+
+.box-imagem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.logo-bllie{
+  width: 300px; /* Altere o tamanho se achar necessário */
+  height: auto;
+  margin-top: 30px; /* Altere o valor (20px, 40px, etc.) até ficar na altura que você quer */
+  border-radius: 12px;
+  
+  box-shadow: 0 0 0 rgba(129, 219, 120, 0); 
+  
+}
+
+/* ==================================================
+  Álbum
+================================================== */
+/* Container Geral da Seção */
+.albuns-secao {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  
+}
+
+.titulo-secao {
+  font-size: 2.5rem;
+ 
+  margin-bottom: 2.5rem;
+  letter-spacing: 2px;
+}
+/* Cria a Grade Magnética (Se adapta sozinha no celular) */
+.grid-albuns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem; /* Espaço entre os cards */
+}
+
+/* Estilo Individual de cada Card */
+.album-card {
+  background-color: #111111; /* Fundo cinza bem escuro */
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Capa do Álbum */
+.album-capa {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1; /* Garante que a imagem seja sempre um quadrado perfeito */
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+/* Textos internos do Card */
+.album-card h3 {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  min-height: 44px; /* Mantém os títulos alinhados mesmo se um ocupar 2 linhas */
+}
+
+.album-ano {
+  font-size: 0.9rem;
+  color: #888888; /* Ano em cinza mais discreto */
+}
+
+
+.album-card:hover {
+  transform: translateY(-8px); /* Eleva o card levemente */
+  
+  /* Dispara o brilho verde neon em volta do card inteiro */
+  box-shadow: 0 0 15px 2px rgba(129, 219, 120, 0.4), 
+              0 0 30px 5px rgba(129, 219, 120, 0.1);
+}
+
+
+/* ==================================================
+   Seção de Prêmios (Estilo Claro e Atrativo)
+================================================== */
+/* ==================================================
+   Seção de Prêmios (Em harmonia com o tema escuro/HMHAS)
+================================================== */
+.premios-secao {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+
+.premios-secao .titulo-secao {
+  font-size: 2.5rem;
+  color:  #ffffff;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.premios-secao .subtitulo-secao {
+  color: #cccccc !important; 
+  font-size: 1.1rem;
+  margin-bottom: 3.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.grid-premios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+
+.premio-card {
+  background-color: #0b1726 !important;
+  border: 1px solid #162a42 !important;
+  border-radius: 16px;
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.icone-premio {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+
+.premio-card h3 {
+  font-size: 1.2rem;
+  color: #ffffff !important; 
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+
+.premio-card .quantidade {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #70bfff !important; 
+  margin-bottom: 0.5rem;
+}
+
+.detalhe-premio {
+  color: #a0b2c6 !important; 
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* ==================================================
+   ✨ Efeito Hover nos Cards de Prêmios (Atrativo)
+================================================== */
+.premio-card:hover {
+  transform: translateY(-6px);
+  /* Solta a névoa brilhante combinando com o resto da Fan Page */
+  box-shadow: 0 10px 25px rgba(112, 191, 255, 0.25), 
+              0 0 15px rgba(112, 191, 255, 0.15);
+  border-color: rgba(112, 191, 255, 0.4);
+}
+
+/* Caixa de Resumo inferior ajustada para o tema escuro */
+.resumo-premios {
+  background-color: #03080e !important;
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: left;
+  max-width: 750px;
+  margin: 0 auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  border-left: 4px solid #70bfff !important; /* Detalhe lateral azul */
+}
+
+.resumo-premios h3 {
+  color: #ffffff !important;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.resumo-premios li {
+  color: #cccccc !important;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.resumo-premios li strong {
+  color: #70bfff !important;
+}
+
+/* ==================================================
+   ✨ Efeito Hover nos Cards (Brilho Azul Pastel)
+================================================== */
+.premio-card:hover {
+  transform: translateY(-6px); /* Micro-salto para cima */
+  
+  /* Cria uma névoa azulada brilhante em volta do card */
+  box-shadow: 0 10px 25px rgba(52, 152, 219, 0.25), 
+              0 0 15px rgba(52, 152, 219, 0.15);
+  border-color: rgba(52, 152, 219, 0.4); /* Sutil borda azulada */
+}
+
+/* Caixa de Resumo / Curiosidades na parte inferior */
+.resumo-premios {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: left;
+  max-width: 750px;
+  margin: 0 auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  border-left: 4px solid #3498db; /* Barra vertical azul marcante */
+}
+
+.resumo-premios h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.resumo-premios ul {
+  list-style: none;
+  padding: 0;
+}
+
+.resumo-premios li {
+  color: #555555;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.resumo-premios li strong {
+  color: #3498db;
+}
+
+
+/* ==================================================
+   Página: Indicações de Músicas 
+================================================== */
+.indicacoes-secao {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.indicacoes-secao .titulo-secao {
+  font-size: 2.5rem;
+  color: #ffffff; /* Mantém o título branco padrão */
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.indicacoes-secao .subtitulo-secao {
+  color: #a0b2c6; /* Cinza azulado suave para a descrição */
+  font-size: 1.1rem;
+  margin-bottom: 3.5rem;
+}
+
+/* Organização em Grid */
+.grid-indicacoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+/* Cards com a cor azul-oceano escura (Destaca muito no fundo preto do site) */
+.vibe-card {
+  background-color: #0b1726; /* Fundo do card em azul escuro */
+  border: 1px solid #162a42;
+  border-radius: 16px;
+  padding: 2.5rem 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.vibe-icone {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.vibe-card h3 {
+  font-size: 1.3rem;
+  color: #ffffff;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.vibe-descricao {
+  color: #7991a8; /* Texto explicativo em tom oceano suave */
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  min-height: 70px;
+}
+
+/* Lista interna de músicas recomendadas */
+.lista-musicas {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  max-width: 220px;
+  margin: 0 auto;
+}
+
+.lista-musicas li {
+  color: #70bfff; /* Azul-claro luminoso do álbum nos nomes das faixas */
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+
+.lista-musicas li span {
+  margin-right: 8px;
+}
+
+.lista-musicas li small {
+  color: #4a637d;
+  font-weight: 400;
+  margin-left: 5px;
+}
+
+/* ==================================================
+   ✨ Efeito Hover nos Cards (Brilho Azul Subaquático)
+================================================== */
+.vibe-card:hover {
+  transform: translateY(-8px);
+  /* Cria uma névoa azulada brilhante ao invés de verde */
+  box-shadow: 0 10px 25px rgba(112, 191, 255, 0.25), 
+              0 0 15px rgba(112, 191, 255, 0.15);
+  border-color: rgba(112, 191, 255, 0.4);
+}
+
+/* Caixa informativa de Dica na parte de baixo */
+.dica-novato {
+  background-color: #03080e;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: left;
+  border-left: 4px solid #70bfff; /* Detalhe lateral em azul iluminado */
+}
+
+.dica-novato h3 {
+  color: #70bfff;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.dica-novato p {
+  color: #a0b2c6;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* ==================================================
+   Rodapé
+================================================== */
+.my-footer {
+  color: #fff !important;
+  text-align: center; /* Centraliza o texto horizontalmente */
+  padding: 1rem;
+  margin-top: auto; /* Empurra o footer para o final da página */
+  width: 100%;
+}

@@ -1,0 +1,100 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3effa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(142, 120, 181, 0.15);
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #e1d7f1;
+}
+h2 {
+    text-align: center;
+    color: #513d75;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+.radio-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #614d85;
+    font-weight: 500;
+    cursor: pointer;
+}
+.radio-option input[type="radio"] {
+    accent-color: #8e78b5;
+    cursor: pointer;
+}
+.input-group {
+    margin-bottom: 20px;
+}
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #614d85;
+    font-weight: 600;
+    font-size: 14px;
+}
+.input-group input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e1d7f1;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    background-color: #faf8ff;
+    color: #3b2d54;
+}
+.input-group input[type="number"]:focus {
+    outline: none;
+    border-color: #8e78b5;
+    background-color: #ffffff;
+}
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #8e78b5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.1s;
+}
+button:hover {
+    background-color: #765f9b;
+}
+button:active {
+    transform: scale(0.99);
+}
+#resultado {
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    display: none;
+    line-height: 1.5;
+}
+.baixo-peso { background-color: #f3effa; color: #765f9b; border: 1px solid #dcd1ee; }
+.peso-normal { background-color: #e8e0f5; color: #513d75; border: 1px solid #cbbbe3; }
+.sobrepeso { background-color: #dfd2f0; color: #3b2d54; border: 1px solid #baa4da; }
+.obesidade { background-color: #d1bfe9; color: #281e3a; border: 1px solid #a689cd; }

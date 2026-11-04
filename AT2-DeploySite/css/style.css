@@ -1,0 +1,955 @@
+/* =================================
+   Inicio - GameVerse
+================================= */
+
+.navbar {
+    background-color: #fff;
+    height: 80px;
+    margin: 28px;
+    border-radius: 16px;
+    padding: 0.5px;
+}
+
+.navbar-brand {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.nav-link {
+    color: #656777;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active:hover {
+    color: #9B72F2;
+}
+
+@media (min-width: 991px) {
+
+
+    .nav-link::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #9B72F2;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+
+    }
+
+    .nav-link:hover::before,
+    .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+
+    }
+}
+
+.hero-section {
+
+    background: url('../img/ff.jpg') no-repeat center;
+    background-size: cover;
+    width: 100%;
+
+}
+
+.hero-section::before {
+    background-color: rgba(0, 0, 0, 0.6);
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.hero-section .container {
+    height: 100vh;
+    z-index: 1;
+    position: relative;
+
+}
+
+.hero-section h1 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: bold;
+    max-width: 850px;
+}
+
+.hero-section h2 {
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    line-height: 1.5;
+    max-width: 750px;
+}
+
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.hero-buttons .btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.hero-buttons .btn-primary {
+    background-color: #8b5cf6;
+    border-color: #8b5cf6;
+}
+
+.hero-buttons .btn-primary:hover {
+    background-color: #7041d8;
+    border-color: #7041d8;
+    transform: translateY(-3px);
+}
+
+.hero-buttons .btn-outline-light:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =================================
+   Galeria - Imagens dos Jogos
+================================= */
+.section-galeria {
+    min-height: 100vh;
+    padding: 60px 0;
+    background-color: #171522;
+    color: #fff;
+}
+
+.section-galeria h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.section-galeria .card {
+    height: 100%;
+    overflow: hidden;
+    background-color: #242133;
+    color: #fff;
+    border: 1px solid #39334f;
+    border-radius: 14px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-galeria .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.2);
+}
+
+.section-galeria .card-img-top {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.section-galeria .card-title {
+    color: #b69aff;
+    font-weight: bold;
+}
+
+.section-galeria .card-text {
+    color: #d5d2df;
+    line-height: 1.6;
+}
+
+
+/* =================================
+   DADOS - HISTÓRIA DOS VIDEOGAMES
+================================= */
+
+.dados-hero {
+    min-height: 75vh;
+    padding: 150px 0 80px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background:
+        radial-gradient(ellipse at 80% 30%,
+            rgba(139, 92, 246, 0.25), transparent 50%),
+        linear-gradient(135deg, #171522, #211934);
+}
+
+.dados-hero .container {
+    max-width: 1100px;
+}
+
+.dados-etiqueta {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: #b69aff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.dados-hero h1 {
+    max-width: 850px;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.dados-hero h1 span {
+    color: #a78bfa;
+}
+
+.dados-hero p {
+    max-width: 680px;
+    color: #d5d2df;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+.btn-roxo {
+    display: inline-block;
+    padding: 13px 25px;
+    color: #fff;
+    background-color: #8b5cf6;
+    border: 1px solid #8b5cf6;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-roxo:hover {
+    color: #fff;
+    background-color: #7041d8;
+    border-color: #7041d8;
+    transform: translateY(-3px);
+}
+
+/* SEÇÕES */
+
+.dados-secao {
+    padding: 90px 0;
+    background-color: #171522;
+    color: #fff;
+}
+
+.dados-secao:nth-of-type(odd) {
+    background-color: #1d192b;
+}
+
+.dados-titulo {
+    max-width: 750px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.dados-titulo h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.dados-titulo p {
+    color: #c6c1d3;
+    line-height: 1.8;
+}
+
+/* LINHA DO TEMPO */
+
+.timeline {
+    max-width: 850px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 65px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background-color: #8b5cf6;
+}
+
+.timeline-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.timeline-ano {
+    position: relative;
+    z-index: 1;
+    align-self: start;
+    padding-top: 22px;
+    color: #b69aff;
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.timeline-card {
+    padding: 25px;
+    background-color: #242133;
+    border: 1px solid #39334f;
+    border-radius: 14px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.timeline-card:hover {
+    transform: translateY(-4px);
+    border-color: #8b5cf6;
+}
+
+.timeline-card h3 {
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.timeline-card p {
+    margin-bottom: 16px;
+    color: #d5d2df;
+    line-height: 1.8;
+}
+
+.timeline-tag {
+    display: inline-block;
+    padding: 6px 12px;
+    color: #c4b5fd;
+    background-color: rgba(139, 92, 246, 0.15);
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+/* TABELA */
+
+.dados-tabela .table-responsive {
+    border: 1px solid #39334f;
+    border-radius: 12px;
+    overflow-x: auto;
+}
+
+.dados-tabela .table {
+    margin-bottom: 0;
+    min-width: 680px;
+}
+
+.dados-tabela .table thead th {
+    padding: 18px;
+    color: #c4b5fd;
+    background-color: #29223d;
+    border-color: #39334f;
+}
+
+.dados-tabela .table tbody td {
+    padding: 16px 18px;
+    border-color: #39334f;
+}
+
+.dados-tabela .table-hover tbody tr:hover td {
+    color: #fff;
+    background-color: #34284d;
+}
+
+.tabela-nota {
+    margin-top: 15px;
+    color: #aaa4bb;
+    font-size: 0.85rem;
+}
+
+/* ACCORDION */
+
+.dados-faq .accordion {
+    max-width: 850px;
+    margin: 0 auto;
+    --bs-accordion-bg: #242133;
+    --bs-accordion-color: #e7e3ef;
+    --bs-accordion-border-color: #39334f;
+    --bs-accordion-btn-bg: #242133;
+    --bs-accordion-btn-color: #fff;
+    --bs-accordion-active-bg: #34284d;
+    --bs-accordion-active-color: #c4b5fd;
+    --bs-accordion-btn-focus-box-shadow:
+        0 0 0 0.2rem rgba(139, 92, 246, 0.2);
+}
+
+.dados-faq .accordion-button {
+    padding: 22px;
+    font-weight: 600;
+}
+
+.dados-faq .accordion-button::after {
+    filter: brightness(0) invert(1);
+}
+
+.dados-faq .accordion-body {
+    color: #d5d2df;
+    line-height: 1.8;
+}
+
+/* RODAPÉ */
+
+.gameverse-footer {
+    padding: 45px 0;
+    color: #c6c1d3;
+    background-color: #100e18;
+    border-top: 1px solid #39334f;
+}
+
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.footer-logo span {
+    color: #a78bfa;
+}
+
+.gameverse-footer p {
+    margin-bottom: 18px;
+}
+
+.gameverse-footer small {
+    color: #928ba4;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 576px) {
+    .dados-hero {
+        min-height: 70vh;
+        padding: 130px 0 60px;
+    }
+
+    .dados-secao {
+        padding: 65px 0;
+    }
+
+    .timeline::before {
+        left: 7px;
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding-left: 28px;
+    }
+
+    .timeline-ano {
+        padding-top: 0;
+    }
+
+    .timeline-card {
+        padding: 20px;
+    }
+
+    .dados-faq .accordion-button {
+        padding: 18px;
+        font-size: 0.95rem;
+    }
+}
+
+/* =========================
+   PÁGINA SOBRE
+========================= */
+
+.sobre-hero {
+    min-height: 75vh;
+    padding: 150px 0 80px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background:
+        radial-gradient(ellipse at 80% 30%,
+            rgba(139, 92, 246, 0.25),
+            transparent 50%),
+        linear-gradient(135deg, #171522, #211934);
+}
+
+.sobre-hero .container {
+    max-width: 1100px;
+}
+
+.sobre-etiqueta {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: #b69aff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.sobre-hero h1 {
+    max-width: 800px;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.sobre-hero h1 span {
+    color: #a78bfa;
+}
+
+.sobre-hero p {
+    max-width: 680px;
+    color: #d5d2df;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+/* SEÇÕES */
+
+.sobre-secao {
+    padding: 90px 0;
+    color: #fff;
+    background-color: #171522;
+}
+
+.sobre-objetivos {
+    background-color: #1d192b;
+}
+
+.sobre-secao h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    margin-bottom: 22px;
+}
+
+.sobre-secao p {
+    color: #d5d2df;
+    line-height: 1.8;
+}
+
+/* DESTAQUE */
+
+.sobre-destaque {
+    padding: 45px;
+    background:
+        radial-gradient(circle at top right,
+            rgba(139, 92, 246, 0.2),
+            transparent 60%),
+        #242133;
+    border: 1px solid #39334f;
+    border-radius: 20px;
+}
+
+.sobre-simbolo {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.sobre-destaque h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* TÍTULOS CENTRALIZADOS */
+
+.sobre-titulo {
+    max-width: 750px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.sobre-titulo h2 {
+    margin-bottom: 15px;
+}
+
+/* CARDS DE OBJETIVOS */
+
+.sobre-card {
+    height: 100%;
+    padding: 30px;
+    background-color: #242133;
+    border: 1px solid #39334f;
+    border-radius: 16px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.sobre-card:hover {
+    transform: translateY(-6px);
+    border-color: #8b5cf6;
+}
+
+.sobre-icone {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.sobre-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.sobre-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #b69aff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.sobre-card a:hover {
+    color: #d0bcff;
+}
+
+/* TECNOLOGIAS */
+
+.tecnologia-card {
+    height: 100%;
+    padding: 30px;
+    background-color: #242133;
+    border: 1px solid #39334f;
+    border-radius: 14px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.tecnologia-card:hover {
+    transform: translateY(-4px);
+    border-color: #8b5cf6;
+}
+
+.tecnologia-card h3 {
+    color: #b69aff;
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 576px) {
+    .sobre-hero {
+        min-height: 70vh;
+        padding: 130px 0 60px;
+    }
+
+    .sobre-secao {
+        padding: 65px 0;
+    }
+
+    .sobre-destaque,
+    .sobre-card,
+    .tecnologia-card {
+        padding: 24px;
+    }
+}
+
+/* SEÇÃO DA DESENVOLVEDORA */
+
+.sobre-desenvolvedora {
+    padding: 90px 0;
+    background-color: #1d192b;
+    color: #fff;
+}
+
+.desenvolvedora-card {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 40px;
+    align-items: start;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 45px;
+    background-color: #242133;
+    border: 1px solid #39334f;
+    border-radius: 20px;
+}
+
+.desenvolvedora-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #8b5cf6, #493078);
+    box-shadow: 0 10px 35px rgba(139, 92, 246, 0.2);
+}
+
+.desenvolvedora-icon span {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #fff;
+}
+
+.desenvolvedora-conteudo h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.desenvolvedora-conteudo h3 {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #b69aff;
+    margin-bottom: 24px;
+}
+
+.desenvolvedora-conteudo p {
+    color: #d5d2df;
+    line-height: 1.8;
+}
+
+.desenvolvedora-tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.desenvolvedora-tecnologias span {
+    padding: 8px 14px;
+    color: #c4b5fd;
+    background-color: #34284d;
+    border: 1px solid #493768;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .sobre-desenvolvedora {
+        padding: 60px 0;
+    }
+
+    .desenvolvedora-card {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 28px;
+    }
+
+    .desenvolvedora-icon {
+        width: 100px;
+        height: 100px;
+        border-radius: 20px;
+    }
+
+    .desenvolvedora-icon span {
+        font-size: 2.5rem;
+    }
+}
+/* ==========================
+   PÁGINA DE CONTATO
+========================== */
+
+.contato-body {
+    background-color: #171421;
+    color: #fff;
+}
+
+.contato-navbar {
+    background-color: rgba(23, 20, 33, 0.96);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #393047;
+}
+
+.logo-game {
+    color: #b69aff;
+}
+
+.contato-hero {
+    padding: 150px 0 65px;
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(139, 92, 246, 0.18),
+            transparent 65%
+        );
+}
+
+.contato-etiqueta {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #b69aff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.contato-hero h1 {
+    margin-bottom: 20px;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+}
+
+.contato-hero h1 span {
+    color: #a78bfa;
+}
+
+.contato-hero p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #d1cdda;
+    line-height: 1.8;
+}
+
+.contato-secao {
+    padding: 35px 0 90px;
+}
+
+.contato-card {
+    height: 100%;
+    padding: 35px 25px;
+    text-align: center;
+    background-color: #242133;
+    border: 1px solid #39334f;
+    border-radius: 20px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.contato-card:hover {
+    transform: translateY(-8px);
+    border-color: #8b5cf6;
+}
+
+.contato-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 25px;
+    color: #fff;
+    background: linear-gradient(135deg, #8b5cf6, #493078);
+    border-radius: 20px;
+    font-size: 2rem;
+}
+
+.contato-card h2 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.contato-card p {
+    min-height: 75px;
+    color: #c9c5d4;
+    line-height: 1.7;
+}
+
+.contato-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #b69aff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contato-link:hover {
+    color: #fff;
+}
+
+.contato-link i {
+    margin-left: 5px;
+}
+
+.contato-mensagem {
+    max-width: 750px;
+    margin: 80px auto 0;
+    padding: 40px 25px;
+    background-color: #211c30;
+    border: 1px solid #39334f;
+    border-radius: 20px;
+}
+
+.contato-mensagem > i {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #b69aff;
+    font-size: 2.5rem;
+}
+
+.contato-mensagem h2 {
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.contato-mensagem p {
+    margin-bottom: 25px;
+    color: #d1cdda;
+    line-height: 1.8;
+}
+
+.btn-contato-voltar {
+    display: inline-block;
+    padding: 12px 22px;
+    color: #fff;
+    background-color: #7650c9;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-contato-voltar:hover {
+    color: #fff;
+    background-color: #8b5cf6;
+}
+
+.gameverse-footer {
+    padding: 35px 0;
+    background-color: #100e18;
+    border-top: 1px solid #393047;
+}
+
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #b69aff;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.gameverse-footer p {
+    margin-bottom: 12px;
+    color: #d1cdda;
+}
+
+.gameverse-footer span {
+    color: #9690a5;
+    font-size: 0.85rem;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+    .contato-hero {
+        padding: 125px 0 45px;
+    }
+
+    .contato-secao {
+        padding: 25px 0 60px;
+    }
+
+    .contato-card p {
+        min-height: auto;
+    }
+
+    .contato-mensagem {
+        margin-top: 55px;
+        padding: 30px 20px;
+    }
+}
