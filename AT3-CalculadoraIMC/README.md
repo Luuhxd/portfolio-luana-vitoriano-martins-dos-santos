@@ -19,5 +19,4 @@ O projeto está organizado de forma modular para facilitar a manutenção do có
 ├── style.css      # Estilização visual 
 └── script.js      # Lógica do cálculo de IMC e validações
 ```
-
-↩️Clique aqui para voltar ao início (https://github.com/Luuhxd/portfolio-luana-vitoriano-martins-dos-santos)
+<a href="https://github.com/Luuhxd/portfolio-luana-vitoriano-martins-dos-santos" >↩️ Clique aqui para voltar ao início</a>
